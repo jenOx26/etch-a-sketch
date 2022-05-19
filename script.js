@@ -20,10 +20,11 @@ function createGrid(size) {
     let amount = size * size;
     for (let i=0; i < amount; i++) {
         let cell = document.createElement("div");
-        cell.style.backgroundColor = 'gray';
+        cell.style.backgroundColor = 'black';
         grid.insertAdjacentElement('beforeEnd', cell)
         cell.addEventListener('mouseover', function(event) {
-            event.target.style.backgroundColor = 'black';
+            event.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, 
+                ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
         });
     }
 }
